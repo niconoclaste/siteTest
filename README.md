@@ -10,8 +10,8 @@ So I will use this repo to rewrite my homepage using thoses tools.
 
 ## Tools list
 
-* GitHub & Source Tree
-* Gulp
+* [GitHub & Source Tree](#github--source-tree)
+* [Gulp](#Gulp)
 * SASS (SCSS)
 * SMACSS
 * ES6 (vanilla.js)
