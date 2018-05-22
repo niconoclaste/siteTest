@@ -1,5 +1,61 @@
-.success,
-.error,
-.info {
-	font-size: 14px;
+@charset "UTF-8";
+/*@include border-radius(5px);*/
+/* ------------ BASE ------------ */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 16px;
+	background: #ffffff;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	text-size-adjust: none;
+	font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+}
+
+h1, h2, h3 {
+	font-weight: 700;
+	line-height: 1.3em;
+	-webkit-font-feature-settings: 'palt' 1;
+	font-feature-settings: 'palt' 1;
+	color: #222222;
+}
+
+p, li, td, a, span, strong, small {
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 1.6em;
+	color: #222222;
+	text-decoration: none;
+}
+
+br {
+	line-height: 100%;
+}
+
+a img {
+	border: none;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	font-size: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* ------------ LAYOUT ------------ */
+/* ----- HEADER ----- */
+#header {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
 }
