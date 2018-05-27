@@ -55,6 +55,7 @@ const gulp = require('gulp');
 const plugins = require('gulp-load-plugins')();
 const src = './src/';
 const dist = './dist/';
+const repo = '../folderForGit/';
 
 gulp.task('css', function(){
     gulp.src(src + '**/*.scss')
