@@ -24,31 +24,33 @@ I Will use [https://github.com/niconoclaste/niconoclaste.jp](https://github.com/
 
 ### Gulp
 
-Here is the plugins I load on my **package.json** file :
+**package.json** :
 
 ```
-    "devDependencies": {
-        "gulp": "latest",
-        "babel-core": "latest",
-        "babel-preset-env": "latest",
-        "gulp-autoprefixer": "latest",
-        "gulp-babel": "latest",
-        "gulp-concat": "latest",
-        "gulp-cssbeautify": "latest",
-        "gulp-csso": "latest",
-        "gulp-imagemin": "latest",
-        "gulp-load-plugins": "latest",
-        "gulp-rename": "latest",
-        "gulp-sass": "latest",
-        "gulp-sync": "latest",
-        "gulp-uglify": "latest"
-    }
+  "devDependencies": {
+    "babel-core": "latest",
+    "babel-preset-env": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-babel": "latest",
+    "gulp-concat": "latest",
+    "gulp-cssbeautify": "latest",
+    "gulp-csscomb": "latest",
+    "gulp-csso": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-pug": "latest",
+    "gulp-rename": "latest",
+    "gulp-replace": "latest",
+    "gulp-sass": "latest",
+    "gulp-sync": "latest",
+    "gulp-uglify": "latest"
+  }
 ```
 
-Here is the settings I use on my **gulpfile.js** file :
+**gulpfile.js** :
 
 ```
-// gulpfile.js
 const gulp = require('gulp');
 const plugins = require('gulp-load-plugins')();
 const src = './src/';
@@ -63,7 +65,7 @@ gulp.task('css', function(){
         browsers: ['last 2 versions']
     }))
     .pipe(plugins.cssbeautify({
-        indent: '	'
+        indent: '    '
     }))
     .pipe(gulp.dest(src))
     .pipe(gulp.dest(dist));
@@ -75,7 +77,7 @@ gulp.task('css', function(){
     .pipe(gulp.dest(dist));
 });
 
-gulp.task('js', function() {
+gulp.task('js', function(){
     gulp.src([src + 'js/**/*.js', '!' + src + 'js/**/*.min.js'])
     .pipe(plugins.babel({
         presets: ['env']
@@ -92,15 +94,22 @@ gulp.task('js', function() {
 
 gulp.task('html', function(){
     gulp.src(src + '**/*.html')
+    .pipe(plugins.replace('    ', '  '))
     .pipe(gulp.dest(dist));
 });
+
 gulp.task('images', function(){
     gulp.src(src + 'img/**/*.{png,jpg,jpeg,gif,svg}')
     .pipe(plugins.imagemin())
     .pipe(gulp.dest(dist + 'img'));
 });
 
-gulp.task('watch', function() {
+gulp.task('export', function(){
+    gulp.src(dist + '**/')
+    .pipe(gulp.dest(repo));
+});
+
+gulp.task('watch', function(){
     gulp.watch(src + '**/*.scss', ['css']);
     gulp.watch([dist + '**/*.css', '!' + dist + '**/*.min.css'], ['css']);
     gulp.watch(src + '**/*.html', ['html']);
