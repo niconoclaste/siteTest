@@ -106,7 +106,7 @@ gulp.task('images', function(){
 });
 
 gulp.task('export', function(){
-    gulp.src(dist + '**/')
+    gulp.src(dist + '**/*')
     .pipe(gulp.dest(repo));
 });
 
