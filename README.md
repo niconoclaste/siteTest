@@ -2,19 +2,13 @@
 
 *This repo is for a study purpose.*
 
-For 5 years I worked for a small web agency. I used to code alone and was able to choose myself the tools I wanted to use.
-
-New job means new tools, new tools means that I need to update myself !
-
-So I will use this repo to rewrite my homepage using thoses tools.
-
 ## Tools list
 
 * [GitHub & Source Tree](#github--source-tree)
 * [Gulp](#gulp)
-* SASS (SCSS)
-* SMACSS
-* ES6 (vanilla.js)
+* SASS (SCSS) -> SMACSS
+* ES6 (with babel)
+
 * view.js
 * pug.js
 
