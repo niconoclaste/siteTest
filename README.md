@@ -1,6 +1,6 @@
 # NicoNoClaste.jp
 
-*This repo is for a study purpose.*
+*This repo is for a study purpose....*
 
 ## Tools list
 
