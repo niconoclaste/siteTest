@@ -1,0 +1,31 @@
+{
+  "name": "niconoclaste",
+  "version": "3.2.0",
+  "description": "Renewal of niconoclaste.jp",
+  "homepage": "http://niconoclaste.jp/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/niconoclaste/niconoclaste.jp.git"
+  },
+  "author": "nicoNoClaste",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "latest",
+    "babel-preset-env": "latest",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "latest",
+    "gulp-babel": "latest",
+    "gulp-concat": "latest",
+    "gulp-cssbeautify": "latest",
+    "gulp-csso": "latest",
+    "gulp-image-resize": "^0.13.0",
+    "gulp-imagemin": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-pug": "latest",
+    "gulp-rename": "latest",
+    "gulp-replace": "latest",
+    "gulp-sass": "latest",
+    "gulp-sync": "latest",
+    "gulp-uglify": "latest"
+  }
+}
